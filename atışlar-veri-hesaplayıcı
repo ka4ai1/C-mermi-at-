@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<locale.h>
+#include<math.h>
+int main()
+{
+setlocale(LC_CTYPE,"Turkish");
+int bv,ba; //baslangic hizi,baslangic acisi
+double aci,aci2;
+printf("Başlangıç hızı (m/sn)? ");
+scanf("%d",&bv);
+printf("Başlangıç açısı (derece)? ");
+scanf("%d",&ba);
+aci=sin(ba);
+aci2=sin(2*ba);
+double h=(bv*bv*aci)/9.81;
+double t=(2*bv*aci)/9.81;
+double d=(bv*bv*aci2)/9.81;
+printf("\nYükseklik   (m)  : %.2lf\n",h);
+printf("Mesafe      (m)  : %.2lf\n",d);
+printf("Uçus Zamanı (sn) :  %.2lf",t);
+}
